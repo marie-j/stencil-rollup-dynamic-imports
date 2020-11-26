@@ -1,0 +1,20 @@
+{
+  "name": "wrapper-hello-world",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "rollup -c --environment BUILD:production",
+    "start": "lerna exec --stream --scope='wrapper-hello-world' --include-dependencies -- yarn build"
+  },
+  "dependencies": {
+    "hello-world": "^0.0.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-dynamic-import-vars": "^1.1.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "rollup": "2.0.2",
+    "rollup-plugin-node-polyfills": "^0.2.1"
+  }
+}
